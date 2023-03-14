@@ -17,3 +17,5 @@ please read inside VariableImplementations.py for further information
     - Title: Write down clearly what that PR has
     - Description: empty
 4. Send PR link to reviewer (Hiep)
+
+NOTE: NEVER PUSH CODE DIRECTLY TO MAIN BRANCH
