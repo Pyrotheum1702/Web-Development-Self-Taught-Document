@@ -1,4 +1,5 @@
-
+# THIS FILE IS NOT FOR DOCUMENT PURPOSES
+# THIS IS JUST FOR ME TO REMEMBER
 
 # print function and ternary operator
 print("0 > 1 is " + True if 0 > 1 else False)
