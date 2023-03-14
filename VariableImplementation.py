@@ -1,5 +1,3 @@
-#
-
 
 # Python basic Variable types
 # There are multiple built-in data types
@@ -40,3 +38,11 @@ number_1 = 1000
 # number ----> [999]
 # number_1 --> [1000]
 #  ?     ----> [1001] orphaned
+
+# Object identity
+# id(object) to get the id as an identity of that object
+id(number)
+# the statement above will actually return the id of the integer object *number* is referring to
+temp = number
+# as expected *temp* will have the same id as *number*
+id(temp) == id(number)  # True
