@@ -4,6 +4,6 @@
 2. Lesson content:
   - How to create a .py file and execute it, print "Hello, World!" on the command line
 3. What i learned:
-  1. print() function:
-    - Syntax and how it work
-  2. how to execute a py.file
+   1. ```print()``` function:
+      - Syntax and how it work
+   2. how to execute a py.file
