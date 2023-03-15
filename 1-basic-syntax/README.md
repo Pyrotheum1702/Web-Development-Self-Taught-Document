@@ -23,3 +23,24 @@
   - what are the naming conventions for Python identifiers
   - Python is a case sensitive programming language, so for example: Number and number are two different identifier
   - Python Class names start with an uppercase letter. All other identifiers start with a lowercase letter
+# Python Reserved Words
+1. Where did i learn this from:
+  - https://realpython.com/lessons/reserved-keywords/
+2. Lesson content:
+  - A small set of keywords that designate special language functionality
+3. What i learned:
+  - object can not have name same as a reserved word
+  - there are 33 reserved keywords
+1. Thing to be noticed:
+  - Python reversed word list:
+
+| Keywords |         |          |        |
+| -------- | ------- | -------- | ------ |
+| None     | del     | import   | return |
+| True     | elif    | in       | try    |
+| and      | else    | is       | while  |
+| as       | except  | lambda   | with   |
+| assert   | finally | nonlocal | yield  |
+| break    | for     | not      |        |
+| class    | from    | or       |        |
+| continue | global  | pass     |        |
