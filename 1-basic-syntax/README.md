@@ -48,3 +48,4 @@
       - Indentation refers to the spaces at the beginning of a code line
       - Code without indentation belongs to the source file
    - All statements within a code block must be indented the same amount
+   - When a code block starts and when it's ends.
