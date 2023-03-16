@@ -4,27 +4,29 @@
 2. What i learned:
     - ```print()``` function:
       - Syntax and how it work
-    - how to execute a py.file
+    - How to execute a py.file
 # Python Identifiers
 1. Lesson content:
   - Python identifiers as a name for variable, function, class, module or other object
-  - which character are allowed within an identifier and what is not
-  - naming conventions for Python identifiers
+  - Which character are allowed within an identifier and what is not
+  - Naming conventions for Python identifiers
 2. What i learned:
-  - which character are allowed within an identifier:
+  - Which character are allowed within an identifier:
     -  a to z
     -  A to Z
     -  0 to 9
     -  underscore ```_```
-  - what are the naming conventions for Python identifiers
+  - Class name use CapWords convention
+  - Number as start of a identifier is not allowed
+  - What are the naming conventions for Python identifiers
   - Python is a case sensitive programming language, so for example: Number and number are two different identifier
   - Python Class names start with an uppercase letter. All other identifiers start with a lowercase letter
 # Python Reserved Words
 1. Lesson content:
   - A small set of keywords that designate special language functionality
 2. What i learned:
-  - object can not have name same as a reserved word
-  - there are 33 reserved keywords
+  - Object can not have name same as a reserved word
+  - There are 33 reserved keywords
 3. Thing to be noticed:
   - Python reversed word list:
 
