@@ -1,5 +1,5 @@
-
-class ClassName:  # class name use Capwords convention
+# class name use Capwords convention
+class ClassName:
 
     # here are different declare cases
     # a typical variable with it's identifier and it's value
