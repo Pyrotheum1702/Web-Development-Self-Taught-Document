@@ -1,3 +1,4 @@
+
 class ClassName:  # class name use Capwords convention
 
     # here are different declare cases
