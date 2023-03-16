@@ -40,3 +40,11 @@
 | break    | for     | not      |        |
 | class    | from    | or       |        |
 | continue | global  | pass     |        |
+# Python Indentation
+1. Lesson content:
+   - Indentation in Python
+2. What i learned:
+   - Indentation:
+      - Indentation refers to the spaces at the beginning of a code line
+      - Code without indentation belongs to the source file
+   - All statements within a code block must be indented the same amount
