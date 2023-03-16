@@ -42,10 +42,10 @@
 | continue | global  | pass     |        |
 # Python Indentation
 1. Lesson content:
-   - Indentation in Python
+  - Indentation in Python
 2. What i learned:
-   - Indentation:
+  - Indentation:
       - Indentation refers to the spaces at the beginning of a code line
       - Code without indentation belongs to the source file
-   - All statements within a code block must be indented the same amount
-   - When a code block starts and when it's ends.
+  - All statements within a code block must be indented the same amount
+  - When a code block starts and when it's ends.
