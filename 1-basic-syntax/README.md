@@ -27,7 +27,7 @@
 2. What i learned:
   - Object can not have name same as a reserved word
   - There are 33 reserved keywords
-3. Thing to be noticed:
+3. Things to be noticed:
   - Python reversed word list:
 
 | Keywords |         |          |        |
@@ -49,3 +49,11 @@
       - Code without indentation belongs to the source file
   - All statements within a code block must be indented the same amount
   - When a code block starts and when it's ends.
+# Python Quotations
+1. Lesson content:
+  - Quote symbols, used to create string object in Python
+2. What i learned:
+  - How to implement a quotes
+  - How many way to implement a quotes
+  - Different type of quotes
+  - How to have quotation mark in a string literal
