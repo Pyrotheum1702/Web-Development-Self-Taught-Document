@@ -23,6 +23,9 @@ if (True):
 # therefore it's not in the same code block as A B and D. Instead
 # it's belong to the second if statement which it's condition is false.
 
-#     -Notice: D print() function call separated by 1 line but
+#     -Notice:
+#       - D print() function call separated by 1 line but
 # it's still considered belong to code block 1 because it's has
 # equal amount of spaces at start with A and B.
+#       - if the next line has less spaces at start then
+# the code block of the current line is closed
