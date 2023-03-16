@@ -57,3 +57,8 @@
   - How many way to implement a quotes
   - Different type of quotes
   - How to have quotation mark in a string literal
+# Python Multiple Statements On A Single Line
+1. Lesson content:
+  - Multiple statement of a single line
+2. What i learned:
+  - How to implement multiple statement of a single line
