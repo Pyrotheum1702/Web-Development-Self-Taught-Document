@@ -12,14 +12,14 @@
   - How to define a function:
     - Rules to define a function:
       - Function header line begin with the keyword `def` then function name and then parentheses `( )` with a colon `:` at last
-      - Function naming rules: lowercase with words separated by underscores.
+      - Function naming convention: snake_case style
       - Any input parameters is put within the parentheses `( )`
     - Example: `def function_name (parameter a, parameter b):`
   - How to call a function:
     - Simply call it's name with it's arguments inside parentheses
   - A default argument is an argument that assumes a default value if a value is not provided in the function call
   - The `return` statement exits a function, optionally passing back an expression to the caller. A return statement with no arguments is the same as return `None`
-  3. Things to noticed:
+  1. Things to noticed:
   - A function is should be define to perform a specific action relate to it's names
   - Python Built-In function:
       | abs() | bin() | callable() | set() | delattr() | filter() | getattr() | hasattr() | id() | len() | map() | enumerate() | object() | pow() | tuple() | range() | next() | vars() |
