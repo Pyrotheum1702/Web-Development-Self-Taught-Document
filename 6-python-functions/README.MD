@@ -22,7 +22,6 @@
   3. Things to noticed:
   - A function is should be define to perform a specific action relate to it's names
   - Python Built-In function:
-  - Built-in Functions
       | abs() | bin() | callable() | set() | delattr() | filter() | getattr() | hasattr() | id() | len() | map() | enumerate() | object() | pow() | tuple() | range() | next() | vars() |
       |---|---|---|---|---|---:|---|---|---|---|---|---|---|---|---|---|---|---|
       | aiter() | bool() | chr() | setattr() | dict() | float() | globals() | hash() | input() | list() | max() | eval() | oct() | print() | type() | repr() |  |  |
