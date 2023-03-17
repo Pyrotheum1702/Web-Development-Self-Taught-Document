@@ -19,7 +19,9 @@ print(var_1)
 # Result var_1 = 1
 
 # Chain assign variable
-var2, var_3 = 3.14
-print(var2, var_3)
-# Result var2 = 3.14
+var_2 = var_3 = var_4 = 3.14
+print(var_2, var_3, var_4)
+# Result var_2 = 3.14
 # Result var_3 = 3.14
+# Result var_4 = 3.14
+
