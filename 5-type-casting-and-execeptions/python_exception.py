@@ -27,3 +27,15 @@ except AssertionError as except_message:
 finally:
     print("this code will be executed in anyway")
 # Result: "this code will be executed in anyway"
+    print("-")
+# `else` clause example
+try:
+    assert ('win32' in sys.platform), "This program runs on Window 10 only."
+except AssertionError as except_message:
+    print(except_message)
+    print("Exit program...")
+else:
+    print("This program is running on correct platform")
+finally:
+    print("this code will be executed in anyway")
+# Result: "this code will be executed in anyway"

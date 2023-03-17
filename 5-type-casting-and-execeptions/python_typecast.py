@@ -41,3 +41,5 @@ print(str(i))
 f = 4.7
 print(str(f))
 # Result: 4.7(float) -> "4.7"(str)
+
+print(int("abc"))
