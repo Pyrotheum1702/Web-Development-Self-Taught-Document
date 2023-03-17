@@ -13,6 +13,7 @@
 # Switch Case Statement
   1. Lesson content:
     - Switch case statement
-  1. What i learned:
+  2. What i learned:
     - How to implement switch case statement
+    - If there is no any case match, the `_` case will be executed.
     - From version 3.10 upwards, Python has implemented a switch case feature called “structural pattern matching”. Before that Python doesn't have switch statement feature.
