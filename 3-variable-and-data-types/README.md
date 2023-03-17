@@ -16,3 +16,15 @@
   - Variable could be re-assign with different type of data
   - How to chain assign multiple variable simultaneously
   - Python variable is dynamically typed
+  # Data Type
+  1. Lesson content:
+  - Integer
+  - Floating-Point number
+  - Strings
+  1. What i learned:
+  - Integer is a whole number, without decimals and are of unlimited length
+  - Float is a value with decimals, Float values in Python are represented as 64-bit double-precision values
+  - String is a sequences of character data
+  - A String can contain unlimited number of character
+  - Integer and Float can be either positive or negative
+  - In Python there is no limit to how long an integer value can be
