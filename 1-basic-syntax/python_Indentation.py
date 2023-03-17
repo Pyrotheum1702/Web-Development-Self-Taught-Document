@@ -1,7 +1,7 @@
 
 # 1. What is indentation
 #   - Example:
-if (True):
+if True:
     print("A")
 # ^ |
 # |
@@ -11,7 +11,7 @@ if (True):
 #   - Lines with equal amount of indentation are considered a code block
 #   - Example:
 #    - Read the code from below, there are 4 print() function call, i separate them by A B C D
-if (True):
+if True:
     print("A")  # A - belong to code block 1
     print("B")  # B - belong to code block 1
     if (False):  # - belong to code block 1

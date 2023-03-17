@@ -25,7 +25,7 @@
     -  A to Z
     -  0 to 9
     -  underscore ```_```
-  - Class name use CapWords convention
+  - Class name use CamelCase naming convention
   - Number as start of a identifier is not allowed
   - What are the naming conventions for Python identifiers
   - Python is a case sensitive programming language, so for example: Number and number are two different identifier
