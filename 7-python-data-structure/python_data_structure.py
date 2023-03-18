@@ -12,6 +12,34 @@ list_2 = list([1, 2.0, "three", 4])
 print(list_2)
 # Result: list_1 = [1, 2.0, "three", 4]
 
+# List index accessing example:
+list_3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(list_3[0])
+# Result: list_3[0] = 1
+print(list_3[-1])
+# Result: list_3[-1] = 10
+print(list_3[3])
+# Result: list_3[3] = 4
+print(list_3[-4])
+# Result: list_3[-4] = 7
+
+# If the given index is higher than the size of the list example no.1:
+try:
+    print(list_3[13])
+except Exception as error_message:
+    print(error_message)
+    print("Exception type: ", type(error_message))
+# Result: list index out of range
+# Exception type: IndexError
+
+# If the given index is higher than the size of the list example no.2:
+try:
+    print(list_3[-12])
+except Exception as error_message:
+    print(error_message)
+    print("Exception type: ", type(error_message))
+# Result: list index out of range
+# Exception type: IndexError
 
 # Multiple data type in a list example
 abc = ["string", 12, 93.4]

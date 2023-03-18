@@ -31,6 +31,7 @@
     - Different elements of a list can be accessed by by an index start by 0
       - If the given index is 0 or a positive number, it will return the value from the first index forward
       - If the given index is a negative number, it will return the value from the last index backward
+      - If the given index is higher than the size of the list, either positive number or negative number. An IndexError will occur.
     - Strengths of list:
       - They represent the easiest way to store a collection of related objects.
       - They are easy to modify by removing, adding, and changing elements.
