@@ -22,6 +22,7 @@ print(list_3[3])
 # Result: list_3[3] = 4
 print(list_3[-4])
 # Result: list_3[-4] = 7
+print(list_3[2:3])
 
 # If the given index is higher than the size of the list example no.1:
 try:
@@ -46,6 +47,37 @@ abc = ["string", 12, 93.4]
 print(abc)
 # Result: abc = ['string', 12, 93.4]
 
+# Slicing list example:
+
+number_list = [0,1,2,3,4,5,6,7,8,9,10]
+
+# `list[:]` example:
+print(number_list[:])
+# Result: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# `list[x:]` example:
+print(number_list[4:])
+# Result: [4, 5, 6, 7, 8, 9, 10]
+
+# `list[:x]` return a new  list form start of the list to index `x` - 1
+print(number_list[:8])
+# Result: [0, 1, 2, 3, 4, 5, 6, 7]
+
+# `list[x:y]` return a new  list from index `x` to index `y` - 1
+print(number_list[3:9])
+# Result: [3, 4, 5, 6, 7, 8]
+
+# `list[x:y:z]` return a new  list from index `x` to index `y` - 1 by `z` step between each element
+print(number_list[0:11:1])
+# Result: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(number_list[0:11:2])
+# Result: [0, 2, 4, 6, 8, 10]
+print(number_list[0:-1:3])
+# Result: [0, 3, 6, 9]
+print(number_list[-10:-1:2])
+# Result: [1, 3, 5, 7, 9]
+print(number_list[1:10:2])
+# Result: [1, 3, 5, 7, 9]
 
 # All use of list methods example:
 
@@ -108,6 +140,76 @@ set_2 = set([1, 2, 3, 4])
 print(set_2)
 # Result: set_2 = {1, 2, 3, 4}
 
+# Set Union Method
+
+set_1 = {1,2,3,4,5,6,7,8}
+set_2 = {4,5,6,7,8,9,10}
+
+# Set union method example:
+print(set_1.union(set_2))
+# Result: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+
+# Set union method with a tuple example:
+print(set_1.union((10,11,12,18,19,20)))
+# Result: {1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 18, 19, 20}
+
+# Set union method with a list example:
+print(set_1.union([-10,-11,-12,18,19,20]))
+# Result: {1, 2, 3, 4, 5, 6, 7, 8, 18, 19, -12, -11, -10, 20}
+
+# Set union operator example:
+print(set_1 | set_2)
+# Result: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+
+# Set union operator with other iterable type example:
+try:
+    print(set_1 | (60,61,62))
+except Exception as error_message:
+    print(error_message)
+    print("Exception type: ", type(error_message))
+# Result: unsupported operand type(s) for |: 'set' and 'tuple'
+# Exception type: TypeError
+
+# Set intersection Method
+
+set_1 = {1,2,3,4,5,6,7,8}
+set_2 = {4,5,6,7,8,9,10}
+
+# Set intersection method example:
+print(set_1.intersection(set_2))
+# Result: {4, 5, 6, 7, 8}
+
+
+# Set intersection operator example:
+print(set_1 & set_2)
+# Result: {4, 5, 6, 7, 8}
+
+# Set more than 2 intersection operator example:
+print(set_1 & set_2 & {5,6,7})
+# Result: {5, 6, 7}
+print(set_1 & set_2 & {1,2,3,5,6,7,10} & {1,5,6,8,10,14})
+# Result: {5, 6}
+
+
+# Set difference Method
+
+set_1 = {1,2,3,4,5,6,7,8}
+set_2 = {4,5,6,7,8,9,10}
+
+# Set difference method example:
+print(set_1.difference(set_2))
+# Result: {4, 5, 6, 7, 8}
+
+
+# Set difference operator example:
+print(set_1 - set_2)
+# Result: {1, 2, 3}
+
+# Set more than 2 difference operator example:
+print(set_1 - set_2 - {1,3,4,5})
+# Result: {2}
+print(set_1 - set_2 - {3,5} - {1,-1})
+# Result: {2}
 
 # Dictionary Data Structure
 

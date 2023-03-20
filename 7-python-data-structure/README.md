@@ -3,11 +3,11 @@
   2. Python Built-In Data Structure
 # Data Structure
   1. Lesson content:
-    - What is Data Structure in programming
+  - What is Data Structure in programming
   2. What i learned:
-    - What is Data Structure in programming:
-      - A data structure is a way of organizing data in computer memory, implemented in a programming language.
-      - A data structure purpose is for efficient storage, retrieval, and modification of data.
+  - What is Data Structure in programming:
+    - A data structure is a way of organizing data in computer memory, implemented in a programming language.
+    - A data structure purpose is for efficient storage, retrieval, and modification of data.
 # Python Built-In Data Structure
   1. Lesson content:
   - Built-in data structures in Python
@@ -23,6 +23,9 @@
       - Definition: immutable data structures are those we can not modify or change after their creation.
       - Immutable data structure list:
         - tuple
+        - strings
+        - frozen sets
+        - numbers (Integer, Rational, Float, Decimal, Complex & Booleans)
   - List Data Structure:
     - List in Python is a dynamic mutable array which hold an ordered collection of items.
     - How to create a list
@@ -70,6 +73,42 @@
   - Set Data Structure:
     - A set is an unordered collection that only contain unique elements, so no duplicates are allowed.
     - How to create a set
+    - Set union `.union()`:
+      - Create a new set from a combination between sets and any iterable object that will get converted into a set
+      - You could also use `|` operator but only work for set and other set.
+    - Set intersection `.intersection()`:
+      - Create a new set from similar elements between sets and any iterable object that will get converted into a set.
+      - You could also use `&` operator but only work for set and other set.
+        - The intersection will start from the first and the second set and then intersect 2 set at a time onward
+    - Set difference `.difference()`:
+      - Create a new set from elements that are represents in a set but are not represents in any iterable object that will get converted into a set.
+      - You could also use `-` operator but only work for set and other set.
+        - The difference comparison will start from the first and the second set and then intersect 2 set at a time onward
+    -  Set symmetric difference `.symmetric_difference()`:
+      - Create a new set from un-similar elements between sets and any iterable object that will get converted into a set, the opposite of set intersection
+      -  You could also use `^` operator but only work for set and other set.
+    - `.isdisjoint()`:
+      - Return boolean value for whether or not two sets have any elements in common.
+    - `.issubset(x)`:
+      - Return boolean value for whether or not the set has all the elements in common to elements in set `x`.
+      - Operator: `<=`
+        - Use example: `x` `<=` `x2`
+    - `.issuperset(x)`:
+      - Return boolean value for whether or not the `x` set has all the elements in common to elements in the set.
+      - Operator: `=>`
+        - Use example: `x` `=>` `x2`
+    - `.add(x)`:
+      - Add element `x` into the set
+    - `.remove(x)`:
+      - Remove element `x` from the set, raise Exception if `x` is not in the set
+    - `.discard(x)`:
+      - Discard element `x` from the set, but does not raise Exception if `x` is not in the set
+    - `.pop(x)`:
+      - Remove a random element from the set an return it
+    - `.clear()`:
+      - Remove all elements from the set
+    - Frozen Set:
+      - Like set but immutable. Once created, can not change afterward. Frozen set does not have modifying methods like set.
   - Dictionary Data Structure:
     - A dictionary is an unordered collection of *keys* and *values* associated with them.
     - Dictionaries are used to quickly access certain data associated with a unique key.
@@ -78,3 +117,10 @@
     - A Tuple is an ordered collection and is immutable, mean once created, cannot be modified anymore.
     - If you try to change the value of a tuple a TypeError Exception will occur.
     - How to create a tuple
+  -  Generate slice object using indexing syntax:
+      - `list[:]` return a copy of the list
+      - `list[x:]` return a new list form index `x` to end of the list
+      - `list[:x]` return a new  list form start of the list to index `x` - 1
+      - `list[x:y]` return a new  list from index `x` to index `y` - 1
+      - `list[x:y:z]` return a new  list from index `x` to index `y` - 1 by `z` step between each element
+      - If the given index is negative, the index is counted backward from the end of the list
