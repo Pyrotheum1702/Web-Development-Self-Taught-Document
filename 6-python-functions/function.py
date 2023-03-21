@@ -22,7 +22,7 @@ def print_slot_list(a="empty", b="empty", c="empty"):
 # Only pass value to argument a case
 print_slot_list("7")
 # Only pass value to argument b case
-print_slot_list(b = "10")
+print_slot_list(b="10")
 # Only pass value to argument  a and c case
-print_slot_list(a = "23", c = "230")
+print_slot_list(a="23",c="230")
 # Result: A slot = 7 B slot = empty C slot = empty
