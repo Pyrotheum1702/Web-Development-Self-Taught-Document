@@ -112,7 +112,23 @@
   - Dictionary Data Structure:
     - A dictionary is an unordered collection of *keys* and *values* associated with them.
     - Dictionaries are used to quickly access certain data associated with a unique key.
+    - Almost any immutable type could be use as key
     - How to create a dictionary
+    - Built-in methods:
+      - `x.clear()`: Clear all keys and values from the dict.
+      - `d.get(x)`: Return the value for key `x` if it exists in the dictionary. If not, it return `None`.
+      - `d.get(x, y)`: Return the value for key `x` if it exists in the dictionary. If not, it return `y`.
+      - `d.items()`: Return view of the dictionary’s items.
+      - `d.keys()`: Returns a view of keys in the dictionary.
+      - `d.values()`: Returns a view of values in the dictionary.
+      - `d.pop(x)`: Remove the key `x` from the dictionary and returns it value if presented, else `KeyError` Exception will occur:
+      - `d.pop(x, y)`: Removes the key `x` from the dictionary and returns it value if presented, else return `y`:
+      - `popitem()`: Remove the last key-value pair added and return the pairs as a tuple. If the dictionary is empty, a `KeyError` Exception will occur.
+      - `y.update(x)`:
+        - Merge the dictionary `y` with dictionary `x`.
+        - For each key in `x`:
+          - If the key is not present in `y`, the key-value pair from `x` is added to `y`.
+          - If the key is already present in `y`, the corresponding value of the key from `y` is updated to the value of that key from `x`.
   - Tuple Data Structure:
     - A Tuple is an ordered collection and is immutable, mean once created, cannot be modified anymore.
     - If you try to change the value of a tuple a TypeError Exception will occur.

@@ -227,6 +227,88 @@ print(dict_2)
 print(dict_2["two"])
 # Result: dict_2["two"] = 2
 
+# Dictionary Methods
+
+d = {"Duoc": "Tu Son",
+     "Dat": "Luong Tai",
+     "Tam": "Hiep Hoa",
+     "Hieu": "Luc Ngan",
+     "Hung": "Lang Giang"
+}
+
+d_2 = {"Duoc": "Ha Noi",
+     "Hiep": "Tu Son",
+     "Tam": "Hiep Hoa",
+     "Long": "Que Vo",
+}
+
+# .get(x) method example:
+print(d.get("Dat"))
+# Result: Luong Tai
+print(d.get("Dung"))
+# Result: None
+
+# .get(x, y) method example:
+print(d.get("Hieu", "Ten khong ton tai"))
+# Result: Luc Ngan
+print(d.get("Hiep", "Ten khong ton tai"))
+# Result: Ten khong ton tai
+
+# .items() method example:
+print(d.items())
+# Result: dict_items([('Duoc', 'Tu Son'),
+#                     ('Dat', 'Luong Tai'),
+#                     ('Tam', 'Hiep Hoa'),
+#                     ('Hieu', 'Luc Ngan'),
+#                     ('Hung', 'Lang Giang')])
+
+# .keys() method example:
+print(d.keys())
+# Result: dict_keys(['Duoc', 'Dat', 'Tam', 'Hieu', 'Hung'])
+
+# .values() method example:
+print(d.values())
+# Result: dict_values(['Tu Son', 'Luong Tai', 'Hiep Hoa', 'Luc Ngan', 'Lang Giang'])
+
+# .pop(x) method example:
+user_name = "Tam"
+print("Huyen cua " + user_name + " =", d.pop(user_name))
+# Result: Huyen cua Tam = Hiep Hoa
+
+# .pop(x, y) method example:
+user_name = "Tam"
+print("Huyen cua " + user_name + " =", d.pop(user_name, "Khong ton tai"))
+# Result: Huyen cua Tam = Ten khong ton tai
+
+# .popitem() method example:
+print("popped element =",d.popitem())
+# Result: popped element = ('Hung', 'Lang Giang')
+
+# d and d_2 before the .update() method
+print(d)
+# Result d = { 'Duoc': 'Tu Son',
+#              'Dat': 'Luong Tai',
+#              'Hieu': 'Luc Ngan'}
+print(d_2)
+# Result d = { 'Duoc': 'Ha Noi',
+#              'Hiep': 'Tu Son',
+#              'Tam': 'Hiep Hoa',
+#              'Long': 'Que Vo'}
+
+# .update(x) method example:
+d.update(d_2)
+print(d)
+# Result d = { 'Duoc': 'Ha Noi',
+#              'Dat': 'Luong Tai',
+#              'Hieu': 'Luc Ngan',
+#              'Hiep': 'Tu Son',
+#              'Tam': 'Hiep Hoa',
+#              'Long': 'Que Vo'}
+
+# .clear()`: Clear all keys and values from the dict.
+d.clear()
+print(d)
+# Result: d = {}
 
 # Tuple Data Structure
 
