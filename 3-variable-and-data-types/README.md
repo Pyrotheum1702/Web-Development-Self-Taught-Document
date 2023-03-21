@@ -17,6 +17,7 @@
   - Variable could be re-assign with different type of data
   - How to chain assign multiple variable simultaneously
   - Python variable is dynamically typed
+  - String formatting
   # Basic Data Type
   1. Lesson content:
   - Integer
