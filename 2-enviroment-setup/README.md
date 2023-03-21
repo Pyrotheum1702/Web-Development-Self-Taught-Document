@@ -1,5 +1,6 @@
 # Environment Setup
 1. Lesson content:
+  - Pip Python Package Manager
   - Python Window 10 installation
   - How to setup Python for Visual Studio Code
   - How to check for python version and information
@@ -18,3 +19,9 @@
   - How to setup Python for Visual Studio Code
     - 1. type `Python: Select Interpreter` in Command Palette (Ctrl+Shift+P)
     - 2. chose Interpreter version.
+  - Pip Python Package Manager
+    - Pip is the package manager for python use to install and manage packages
+    - Pip installation come with Python installer wizard, simply check the install pip mark to get Pip
+    - You can find python packages from Python Package Index: https://pypi.org/
+    - How to install a package using Pip:
+      - `pip install` + `package name`
