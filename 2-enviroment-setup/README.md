@@ -25,3 +25,7 @@
     - You can find python packages from Python Package Index: https://pypi.org/
     - How to install a package using Pip:
       - `pip install` + `package name`
+  - What is a package:
+    - A python package is a collection of modules. Modules that are related to each other are mainly put in the same package. When a module from an external package is required in a program, that package can be imported and its modules can be put to use.
+  - How Python know where the packages at?:
+    - Python imports work by searching the directories listed in `module sys` -> `sys.path`.
