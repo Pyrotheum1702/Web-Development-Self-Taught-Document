@@ -1,0 +1,142 @@
+# Content Overview
+  1. Data Structure
+  2. Python Built-In Data Structure
+# Data Structure
+  1. Lesson content:
+  - What is Data Structure in programming
+  2. What i learned:
+  - What is Data Structure in programming:
+    - A data structure is a way of organizing data in computer memory, implemented in a programming language.
+    - A data structure purpose is for efficient storage, retrieval, and modification of data.
+# Python Built-In Data Structure
+  1. Lesson content:
+  - Built-in data structures in Python
+  1. what i learned:
+  - Built-in data structures in Python can be divided into two categories:
+    - Mutable:
+      - Definition: mutable data structures are those we can modify, adding, removing, or changing their elements.
+      - Mutable data structure list:
+        - list
+        - set
+        - dictionary
+    - Immutable:
+      - Definition: immutable data structures are those we can not modify or change after their creation.
+      - Immutable data structure list:
+        - tuple
+        - strings
+        - frozen sets
+        - numbers (Integer, Rational, Float, Decimal, Complex & Booleans)
+  - List Data Structure:
+    - List in Python is a dynamic mutable array which hold an ordered collection of items.
+    - How to create a list
+    - In Python, list can contain heterogeneous data types and objects
+      - Example: integer, string, float can be stored within the same list at the same time.
+    - Different elements of a list can be accessed by by an index start by 0
+      - If the given index is 0 or a positive number, it will return the value from the first index forward
+      - If the given index is a negative number, it will return the value from the last index backward
+      - If the given index is higher than the size of the list, either positive number or negative number. An IndexError will occur.
+    - Strengths of list:
+      - They represent the easiest way to store a collection of related objects.
+      - They are easy to modify by removing, adding, and changing elements.
+      - They are useful for creating nested data structures, such as a list of lists or dictionaries.
+    - Weaknesses of list:
+      - They can be pretty slow when performing arithmetic operations on their elements.
+      - They use more disk space because of their under-the-hood implementation.
+    - List built-in methods:
+      - `list.append(x)`
+        - Add an item `x` to the end of the list.
+      - `list.extend(iterable)`
+        - Extend the list by appending all the items from the iterable
+      - `list.insert(i, x)`
+        - Insert an item `x` at `i` index of the element
+      - `list.remove(x)`
+        - Remove the first element in the list that has the value equal to `x`. Raises a ValueError if there is no such item.
+      - `list.pop()`
+        - Remove the item at the last element of the list and return it.
+      - `list.pop(i)`
+        - Remove the item at `x` index and return it.
+      - `list.clear()`
+        - Remove all items from the list.
+      - `list.index(x)`
+        - Return index of the first item has the value equal to `x`. Raises a ValueError if there is no such item.
+      - `list.index(x , i)`
+        - Return index of the first item has the value equal to `x`. But the search for `x` start at index `i` . Raises a ValueError if there is no such item.
+      - `list.index(x , i, j)` - Return index of the first item has the value equal to `x`. But the search for `x` start at index `i` and end at `j`. Raises a ValueError if there is no such item.
+      - `list.count(x)`
+        - Return number of times `x` appears in the list.
+      - `list.sort()`
+        - Sort the items in the list.
+      - `list.reverse()`
+        - Reverse the order of elements of the list.
+      - `list.copy()`
+        - Return a copy of the list as a new object.
+  - Set Data Structure:
+    - A set is an unordered collection that only contain unique elements, so no duplicates are allowed.
+    - How to create a set
+    - Set union `.union()`:
+      - Create a new set from a combination between sets and any iterable object that will get converted into a set
+      - You could also use `|` operator but only work for set and other set.
+    - Set intersection `.intersection()`:
+      - Create a new set from similar elements between sets and any iterable object that will get converted into a set.
+      - You could also use `&` operator but only work for set and other set.
+        - The intersection will start from the first and the second set and then intersect 2 set at a time onward
+    - Set difference `.difference()`:
+      - Create a new set from elements that are represents in a set but are not represents in any iterable object that will get converted into a set.
+      - You could also use `-` operator but only work for set and other set.
+        - The difference comparison will start from the first and the second set and then intersect 2 set at a time onward
+    -  Set symmetric difference `.symmetric_difference()`:
+      - Create a new set from un-similar elements between sets and any iterable object that will get converted into a set, the opposite of set intersection
+      -  You could also use `^` operator but only work for set and other set.
+    - `.isdisjoint()`:
+      - Return boolean value for whether or not two sets have any elements in common.
+    - `.issubset(x)`:
+      - Return boolean value for whether or not the set has all the elements in common to elements in set `x`.
+      - Operator: `<=`
+        - Use example: `x` `<=` `x2`
+    - `.issuperset(x)`:
+      - Return boolean value for whether or not the `x` set has all the elements in common to elements in the set.
+      - Operator: `=>`
+        - Use example: `x` `=>` `x2`
+    - `.add(x)`:
+      - Add element `x` into the set
+    - `.remove(x)`:
+      - Remove element `x` from the set, raise Exception if `x` is not in the set
+    - `.discard(x)`:
+      - Discard element `x` from the set, but does not raise Exception if `x` is not in the set
+    - `.pop(x)`:
+      - Remove a random element from the set an return it
+    - `.clear()`:
+      - Remove all elements from the set
+    - Frozen Set:
+      - Like set but immutable. Once created, can not change afterward. Frozen set does not have modifying methods like set.
+  - Dictionary Data Structure:
+    - A dictionary is an unordered collection of *keys* and *values* associated with them.
+    - Dictionaries are used to quickly access certain data associated with a unique key.
+    - Almost any immutable type could be use as key
+    - How to create a dictionary
+    - Built-in methods:
+      - `.clear()`: Clear all keys and values from the dict.
+      - `.get(x)`: Return the value for key `x` if it exists in the dictionary. If not, it return `None`.
+      - `.get(x, y)`: Return the value for key `x` if it exists in the dictionary. If not, it return `y`.
+      - `.items()`: Return view of the dictionary’s items.
+      - `.keys()`: Returns a view of keys in the dictionary.
+      - `.values()`: Returns a view of values in the dictionary.
+      - `.pop(x)`: Remove the key `x` from the dictionary and returns it value if presented, else `KeyError` Exception will occur:
+      - `.pop(x, y)`: Removes the key `x` from the dictionary and returns it value if presented, else return `y`:
+      - `popitem()`: Remove the last key-value pair added and return the pairs as a tuple. If the dictionary is empty, a `KeyError` Exception will occur.
+      - `y.update(x)`:
+        - Merge the dictionary `y` with dictionary `x`.
+        - For each key in `x`:
+          - If the key is not present in `y`, the key-value pair from `x` is added to `y`.
+          - If the key is already present in `y`, the corresponding value of the key from `y` is updated to the value of that key from `x`.
+  - Tuple Data Structure:
+    - A Tuple is an ordered collection and is immutable, mean once created, cannot be modified anymore.
+    - If you try to change the value of a tuple a TypeError Exception will occur.
+    - How to create a tuple
+  -  Generate slice object using indexing syntax:
+      - `list[:]` return a copy of the list
+      - `list[x:]` return a new list form index `x` to end of the list
+      - `list[:x]` return a new  list form start of the list to index `x` - 1
+      - `list[x:y]` return a new  list from index `x` to index `y` - 1
+      - `list[x:y:z]` return a new  list from index `x` to index `y` - 1 by `z` step between each element
+      - If the given index is negative, the index is counted backward from the end of the list
