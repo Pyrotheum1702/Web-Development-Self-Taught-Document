@@ -20,18 +20,20 @@ while True:
 class ContactList:
 
   def __init__(self):
-    self.index = -1
     self.contact_dict = {} # Key = name, Value = phone number
 
   def set_contact(self, name: str, number: int):
     self.contact_dict[name] = number
 # Iterator protocol: __iter__
   def __iter__(self):
-    return iter(self.contact_dict.items())
+    self.index = -1
+    return self
 # Iterator protocol: __next__
   def __next__(self):
     self.index += 1
-    return list(self.contact_dict)[self.index]
+    if self.index >= len(list(self.contact_dict.items())) :
+      raise StopIteration
+    return list(self.contact_dict.items())[self.index]
 
 # ContactList instantiate
 duoc_contact_list = ContactList()
