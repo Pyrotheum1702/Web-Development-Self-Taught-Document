@@ -1,6 +1,6 @@
 # Content Overview
 1. Python Decorator
-# Python Decorator
+2. # Python Decorator
 1. Lesson content:
   - What is decorator
   - First class object concept
@@ -16,8 +16,8 @@
     -  You can pass the function as a parameter to another function.
     -  You can return the function from a function.
     -  You can store them in data structures such as hash tables, lists, ...
-  - `@decorator-name`: to apply decorators to a function.
+  - `@` + decorator name: put on top of a function to apply the decorator to it.
   - Chaining decorator:
     - Means decorating a function with multiple decorators.
-3. Notice:
+1. Notice:
   - `fuction` vs `function()`: `function` is a function object, `function()` a function call
