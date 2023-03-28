@@ -3,7 +3,7 @@
 
 stack = []
 
-# Instead of push(x), append(x) is used to add elements to the top of the stack
+# append(x) is used to add elements to the top of the stack
 stack.append(1)
 stack.append(2)
 stack.append(4)
@@ -31,7 +31,7 @@ print("size of stack:", len(stack))
 # Whether the stack is empty or not
 print("is stack empty:", not stack)
 
-# Clear stack then
+# Clear stack
 stack.clear()
 
 # Whether the stack is empty or not

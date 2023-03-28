@@ -2,11 +2,12 @@
 1. Array
 2. Linked List
 3. Stack
-4. # Arrays
-5. Lesson Content:
+4. Queue
+5. # Arrays
+6. Lesson Content:
   - Array
   - Array in Python
-6. What i learned:
+7. What i learned:
 - An array is a collection of items stored at contiguous memory locations.
 - List and Array are similar. However user can not constraint the type of elements stored in a list.
 - Array can be handled in Python by a module named `array`. They can be useful when we have to manipulate only a specific data type values.
@@ -24,6 +25,14 @@
 1. Lesson content:
   - Stack
 2. What i learned:
-  - Stack is a linear collection of items, where items are inserted and remove in a specific order
+  - Stack is a linear collection of items, where items are inserted and remove in a specific order.
   - Retrieval an item from the stack follow the LIFO principle(last in first out), where the item to be retrieve will always be the last item that was added to the stack.
   - In Python, we could use `list` to mimic a stack.
+# Queue
+1. Lesson content:
+  - Queue
+2. What i learned:
+  - Queue is similar to stack, is a linear collection of items, where items are inserted and remove in a specific order.
+  - Retrieval an item from the stack follow the FIFO principle(first in first out), where the item to be retrieve will always be the oldest item that was added to the stack.
+  - In Python, we could use `list` to mimic a queue.
+
