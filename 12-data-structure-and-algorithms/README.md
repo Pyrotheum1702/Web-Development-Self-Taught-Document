@@ -6,6 +6,7 @@
 5. Heap Data Structure
 6. Hash Table Data Structure
 7. Binary Tre Data Structure
+8. Recursion Function
 # Array Data Structure
 1. Lesson Content:
   - Array Data Structure
@@ -85,3 +86,18 @@
     - In-order Traversal
     - Pre-order Traversal
     - Post-order Traversal
+# Recursion
+1. Lesson Content:
+  - Recursion
+2. What i learned:
+  - Recursion is the process in which a function calls itself over and over until a certain condition is met.
+  - let's take factorial for the example:
+    - `factorial 5` is basically `5 * factorial 4` and `factorial 4` is basically `4 * factorial 3` and so on until `factorial 1` is 1 so the recursion stop and return all the upper layer function call all the way to the top an return the computation.
+    - `factorial(5)` could be graphically describe as this:
+```mermaid
+5! = 5 * 4! -> [ 5 * 24 = 120 ]
+  4! = 4 * 3! -> [ 4 * 6 = 24  ]
+    3! = 3 * 2! -> [ 3 * 2 = 6   ]
+      2! = 2 * 1! -> [ 2 * 1 = 2   ]
+        1! = 1
+```
