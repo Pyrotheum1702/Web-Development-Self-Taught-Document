@@ -4,11 +4,13 @@
 3. Stack Data Structure
 4. Queue Data Structure
 5. Heap Data Structure
-6. # Array Data Structure
-7. Lesson Content:
+6. Hash Table Data Structure
+7. Binary Tre Data Structure
+# Array Data Structure
+1. Lesson Content:
   - Array Data Structure
   - Array in Python
-8. What i learned:
+2. What i learned:
 - An array is a collection of items stored at contiguous memory locations.
 - List and Array are similar. However user can not constraint the type of elements stored in a list.
 - Array can be handled in Python by a module named `array`. They can be useful when we have to manipulate only a specific data type values.
@@ -65,3 +67,21 @@
             - Index of 6 is 2:
             - `2*2+1 = 5` -> `array[5] = 8`
             - `2*2+2 = 6` -> `array[6] = 11`
+# Binary Tree Data Structure
+1. Lesson content:
+  - Binary Tree Data Structure
+  - Binary Search Tree
+2. What i learned:
+  - A tree data structure is a hierarchical structure that is used to represent and organize data in a way that is easy to navigate and search. It is a collection of nodes that are connected by edges(pointer) and has a hierarchical relationship between the nodes. The topmost node of the tree is called the root, and the nodes below it are called the child nodes. A Recursive structure.
+  - Binary Tree is defined as a tree data structure where each node has at most 2 children.
+  - Binary search tree is binary tree but with the nodes that are sorted by these rule:
+    - the child node on the left must have the value that is smaller than the parent node value
+    - the child node on the right must have the value that is greater than the parent node value
+  - Each node of a Binary Tree contains the following parts:
+    - Data / Value
+    - Reference to left child node
+    - Reference to right child node
+  - The tree can be traversed by deciding on a sequence to visit each node. There are three ways which we use to traverse a tree:
+    - In-order Traversal
+    - Pre-order Traversal
+    - Post-order Traversal
