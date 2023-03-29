@@ -108,3 +108,13 @@
   - Quick Sort
 2. What i learned:
   - Bubble sort is used to repeatedly compare adjacent items in a list or an array and exchange them if they are not in ascending or descending order.
+  - Quick sort:
+    - It picks an element as a pivot and partitions the given array around the picked pivot.
+    - Quick sort turn an array to a two part and split them up over and over again recursively until the size of a part is equal or lesser then 1 and sort the elements during that process.
+    - How Quick sort work i depth:
+      - 1. Pick a any element as a pivot point.
+      - 2. Initialize the left and right pointers, pointing to the left and right ends of the list.
+      - 3. Start moving the left and right pointers toward the pivot while their values are smaller and greater than the pivot, respectively.
+      - 4. At each step, check and place the elements smaller than the pivot to the left of the pivot, and elements greater than that to the right.
+      - 5. When the two pointers meet or cross each other, we have completed one iteration of the list and the pivot is placed in its correct position in the final sorted array.
+      - 6. Now, two new lists are obtained on either side of the pivot. Repeat steps 1–5 on each of these lists until all elements are placed in their correct positions.
