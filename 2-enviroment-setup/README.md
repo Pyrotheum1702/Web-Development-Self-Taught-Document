@@ -1,0 +1,31 @@
+# Environment Setup
+1. Lesson content:
+  - Pip Python Package Manager
+  - Python Window 10 installation
+  - How to setup Python for Visual Studio Code
+  - How to check for python version and information
+  - How to run a Python scripts from the command line
+1. What i learned:
+  - How to check check for python version and information in command line
+    - use `python` in command line
+  - How to Install Python in Window 10
+    - 1. download Python from this link: https://www.python.org/downloads/
+    - 2. run the Installer file
+    - 3. accept all default setting and wait until the install is finished.
+  - How to run a Python scripts from the command line
+    - Type file path in command line
+      - Example:
+        - directory path + \hello_world.py
+  - How to setup Python for Visual Studio Code
+    - 1. type `Python: Select Interpreter` in Command Palette (Ctrl+Shift+P)
+    - 2. chose Interpreter version.
+  - Pip Python Package Manager
+    - Pip is the package manager for python use to install and manage packages
+    - Pip installation come with Python installer wizard, simply check the install pip mark to get Pip
+    - You can find python packages from Python Package Index: https://pypi.org/
+    - How to install a package using Pip:
+      - `pip install` + `package name`
+  - What is a package:
+    - A python package is a collection of modules. Modules that are related to each other are mainly put in the same package. When a module from an external package is required in a program, that package can be imported and its modules can be put to use.
+  - How Python know where the packages at?:
+    - When you import a module, Python will look for it from built-in function or from a list of directories. Which you can inspect it by printing `sys.path` from built-in module `sys`.
