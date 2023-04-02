@@ -2,12 +2,7 @@
 # Return the factorial value of the `n` argument
 def factorial(n):
     if n < 1:
-        try:
-            raise ValueError
-        except ValueError as error_message:
-            print('argument must be positive number')
-            print('Exception type:', error_message)
-            return None
+        print('argument must be positive numbers')
     if n == 1:
         return 1
     return n * factorial(n-1)

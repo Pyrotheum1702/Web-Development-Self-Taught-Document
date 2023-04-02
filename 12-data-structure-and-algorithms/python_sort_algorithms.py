@@ -1,17 +1,13 @@
 import timeit
 
 # Bubble Sort function
-
-
 def bubble_sort(array):
     array_length = len(array)
 
     for i in range(array_length):
         for index in range(array_length - i - 1):
             if index < array_length and array[index] > array[index+1]:
-                temp = array[index]
-                array[index] = array[index+1]
-                array[index + 1] = temp
+                array[index], array[index+1] = array[index+1], array[index]
 
 
 array = [9, 3, 6, 1, 2, 7, 4, 2, 7, 5, 8, 9, 11, 2, 33, 45, 14]
@@ -46,7 +42,6 @@ print('after sort:', array_1)
 # print('after sort:', array_2)
 
 # Quick Sort function
-
 
 def partition(array, start, end):
     left = start - 1

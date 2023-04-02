@@ -1,52 +1,54 @@
 # Node of the linked list
 class Node:
-# value of the node, could be anything that could be understand as value.
-  value = 0
-# reference to the next node
-  next_node = None
-  def __init__(self, value, node):
+  def __init__(self, value, node = None):
     self.value = value
     self.next_node = node
 
+  # Set the next node point to
+  def set_next_node(self, node):
+    self.next_node = node
+
+  # Get the value of the node
+  def get_value(self):
+    return self.value
+
 # Linked List Class
 class LinkedList:
-# head and tail initialize
-  head = Node(1, None)
-  tail = None
-  def __init__(self, value):
-    self.head.value = value
+  def __init__(self, head: Node):
+    self.head = head
 
-# append: append a new node to the tail of the list, making it the new tail node
+  # append: append a new node to the tail of the list, making it the new tail node
   def append(self, value):
     if self.tail is None:
-      self.head.next_node = Node(value, None)
-      self.tail = self.head.next_node
+      self.head.set_next_node(Node(value, None))
+      self.head.set_next_node(self.tail)
     else:
-      self.tail.next_node = Node(value, None)
-      self.tail = self.tail.next_node
+      self.tail.set_next_node(Node(value, None))
+      self.tail.set_next_node(self.tail)
 
-# insert: insert a node after a specified node
+  # insert: insert a node after a specified node
   def insert(self, value, node:Node):
     if node.next_node is None:
-      node.next_node = Node(value, None)
+      node.set_next_node(Node(value, None))
       self.tail = node.next_node
     else:
-      node.next_node = Node(value, node.next_node)
+      node.next_node(Node(value, node.next_node))
 
-# insert: insert a node before the head node, making that node the new head node
+  # insert: insert a node before the head node, making that node the new head node
   def insert_head(self,value):
     new_head = Node(value, self.head)
     self.head = new_head
+
   def delete(self, node:Node):
 # specified node to delete is head case:
-    if node is self.head:
+    if node == self.head:
       new_head = self.head.next_node
       self.head.next_node = None
       self.head = new_head
       return
     temp_node = self.head
 # specified node to delete is tail case:
-    if node is self.tail:
+    if node == self.tail:
 # traverse to the second last node
       while temp_node.next_node.next_node is not None:
         temp_node = temp_node.next_node
@@ -63,7 +65,7 @@ class LinkedList:
     before_node.next_node = node.next_node
     node.next_node = None
 
-# this function return the linked list as a list
+#   this function return the linked list as a list
   def get_list(self):
     return_value = [self.head.value]
     temp_node = self.head
@@ -74,7 +76,7 @@ class LinkedList:
 
 # Linked List test section:
 
-linked_list_1 = LinkedList(0)
+linked_list_1 = LinkedList(Node(0))
 
 inspect_node = None
 
@@ -90,15 +92,15 @@ print(linked_list_1.get_list())
 # inspecting linked_list
 inspect_node: Node = linked_list_1.head
 
-print(inspect_node.value)
+print(inspect_node.get_value())
 # Result: 0
 # next item:
 inspect_node = inspect_node.next_node
-print(inspect_node.value)
+print(inspect_node.get_value())
 # Result: 2
 # next item:
 inspect_node = inspect_node.next_node
-print(inspect_node.value)
+print(inspect_node.get_value())
 # Result: 5
 
 # insert a node at inspec_node position
@@ -128,7 +130,7 @@ print(linked_list_1.get_list())
 
 # Delete a node from the inspect_node position
 # inspect_node position recap
-print(inspect_node.value)
+print(inspect_node.get_value())
 linked_list_1.delete(inspect_node)
 print(linked_list_1.get_list())
 # Result: [-3, -1, 0, 2, 7, 8, 10, 14, 15, 17]
