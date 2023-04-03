@@ -1,7 +1,7 @@
 # Implementation using list:
 # Python’s built-in data structure list can be used as a stack.
 
-class stack(list):
+class Stack(list):
     def __init__(self, value_list):
         self.stack = value_list
 
@@ -15,18 +15,18 @@ class stack(list):
         return return_value
 
     # Return whether the stack is empty
-    def empty(self):
-        if len(self.stack) is 0:
+    def is_empty(self):
+        if len(self.stack) == 0:
             return True
         else:
             return False
 
     # Return number of element in the stack
-    def size(self):
+    def get_size(self):
         return len(self.stack)
 
     # Return topmost item of the stack
-    def top(self):
+    def get_top(self):
         return self.stack[len(self.stack)-1]
 
     # Push an item to the stack
@@ -48,7 +48,7 @@ class stack(list):
     def clear(self):
         self.stack.clear()
 
-stack = stack([])
+stack = Stack([])
 
 # push(x) is used to add elements to the top of the stack
 stack.push(1)

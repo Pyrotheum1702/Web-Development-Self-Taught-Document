@@ -1,3 +1,9 @@
+from enum import Enum, auto
+
+class TraverseMethod(Enum):
+    IN_ORDER: int = 1
+    PRE_ORDER: int = 2
+    POST_ORDER: int = 3
 class Node:
     def __init__(self, value):
         self.left = None
@@ -11,26 +17,25 @@ class Tree:
 
     # Insert a Node into the tree
     def insert(self, node: Node):
-        if node:
-            inspect_node = self.root
-            while True:
-                if node.value < inspect_node.value:
-                    if inspect_node.left is None:
-                        inspect_node.left = node
-                        break
-                    else:
-                        inspect_node = inspect_node.left
-                elif node.value > inspect_node.value:
-                    if inspect_node.right is None:
-                        inspect_node.right = node
-                        break
-                    else:
-                        inspect_node = inspect_node.right
-                else:
+        inspect_node = self.root
+        while True:
+            if node.value < inspect_node.value:
+                if inspect_node.left is None:
+                    inspect_node.left = node
                     break
+                else:
+                    inspect_node = inspect_node.left
+            elif node.value > inspect_node.value:
+                if inspect_node.right is None:
+                    inspect_node.right = node
+                    break
+                else:
+                    inspect_node = inspect_node.right
+            else:
+                break
 
     # Return root node
-    def root_node(self):
+    def get_root(self):
         return self.root
 
     # Search for if a value exist in the tree
@@ -59,31 +64,31 @@ class Tree:
             if inspect_node.right is not None:
                 self.print_tree(inspect_node.right)
 
-    # This function return the tree as a list with a left -> root -> right order
-    def in_order_traversal(self, root: Node):
+    def traverse(self, root: Node, traverse_method: TraverseMethod):
         return_value = []
-        if root is not None:
-            return_value = self.in_order_traversal(root.left)
-            return_value.append(root.value)
-            return_value = return_value + self.in_order_traversal(root.right)
-        return return_value
 
-    # This function return the tree as a list with a root -> left -> right order
-    def pre_order_traversal(self, root: Node):
-        return_value = []
-        if root is not None:
-            return_value.append(root.value)
-            return_value = return_value + self.pre_order_traversal(root.left)
-            return_value = return_value + self.pre_order_traversal(root.right)
-        return return_value
+        if root is None:
+          return return_value
 
-    # This function return the tree as a list with a left -> right -> root order
-    def post_order_traversal(self, root: Node):
-        return_value = []
-        if root is not None:
-            return_value = self.post_order_traversal(root.left)
-            return_value = return_value + self.post_order_traversal(root.right)
-            return_value.append(root.value)
+        match traverse_method:
+          # left -> root -> right order
+          case TraverseMethod.IN_ORDER:
+              return_value = self.traverse(root.left, TraverseMethod.IN_ORDER)
+              return_value.append(root.value)
+              return_value = return_value + self.traverse(root.right, TraverseMethod.IN_ORDER)
+          # root -> left -> right order
+          case TraverseMethod.PRE_ORDER:
+                return_value.append(root.value)
+                return_value = return_value + self.traverse(root.left, TraverseMethod.PRE_ORDER)
+                return_value = return_value + self.traverse(root.right, TraverseMethod.PRE_ORDER)
+                return return_value
+          # left -> right -> root order
+          case TraverseMethod.POST_ORDER:
+                return_value = self.traverse(root.left, TraverseMethod.POST_ORDER)
+                return_value = return_value + self.traverse(root.right, TraverseMethod.POST_ORDER)
+                return_value.append(root.value)
+          case _:
+              raise AssertionError('Weird traverse method')
         return return_value
 
 
@@ -96,11 +101,11 @@ for i in list_1:
 
 
 # Visit each node of `tree` in `in_order` -> [left -> root -> right] format
-print(tree.in_order_traversal(tree.root_node()))
+print(tree.traverse(tree.root_node(), TraverseMethod.IN_ORDER))
 # Visit each node of `tree` in `pre_order` -> [root -> left -> right] format
-print(tree.pre_order_traversal(tree.root_node()))
+print(tree.traverse(tree.root_node(), TraverseMethod.PRE_ORDER))
 # Visit each node of `tree`s in `post_order` [left -> right -> root] format
-print(tree.post_order_traversal(tree.root_node()))
+print(tree.traverse(tree.root_node(), TraverseMethod.POST_ORDER))
 
 # Print all nodes in `tree`
 tree.print_tree(tree.root_node())

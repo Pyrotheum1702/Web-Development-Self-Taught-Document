@@ -27,7 +27,7 @@ class LinkedList:
       self.tail.set_next_node(self.tail)
 
   # insert: insert a node after a specified node
-  def insert(self, value, node:Node):
+  def insert(self, value, node: Node):
     if node.next_node is None:
       node.set_next_node(Node(value, None))
       self.tail = node.next_node
@@ -39,33 +39,37 @@ class LinkedList:
     new_head = Node(value, self.head)
     self.head = new_head
 
-  def delete(self, node:Node):
-# specified node to delete is head case:
+  def delete(self, node: Node):
+    # if specified node to delete is equal to head node, make the next node of head to be the new head, delete old head afterward:
     if node == self.head:
       new_head = self.head.next_node
       self.head.next_node = None
       self.head = new_head
       return
+
+    # this is use to traverse through the list
     temp_node = self.head
-# specified node to delete is tail case:
+
+    # if specified node to delete is tail node, make the second last node to be the new tail and delete old tail:
     if node == self.tail:
-# traverse to the second last node
+      # traverse to the second last node
       while temp_node.next_node.next_node is not None:
         temp_node = temp_node.next_node
       second_last_node = temp_node
-# making the second last node point to None and second last node being the new tail where the last tail is now an orphaned and will get automatically deleted.
+      # making the second last node point to None and second last node being the new tail where the last tail is now an orphaned and will get automatically deleted.
       self.tail = second_last_node
       second_last_node.next_node = None
       return
-# specified node to delete is in the middle case:
-#   traverse to the node before the specified node
+
+    # specified node to delete is in the middle of the linked list.
+    # link the before and after node the specified node together and delete the specified node afterward
     while temp_node.next_node is not node:
         temp_node = temp_node.next_node
     before_node = temp_node
     before_node.next_node = node.next_node
     node.next_node = None
 
-#   this function return the linked list as a list
+  # this function return the linked list as a list
   def get_list(self):
     return_value = [self.head.value]
     temp_node = self.head

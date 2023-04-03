@@ -15,22 +15,22 @@ class queue(list):
         return return_value
 
     # Return whether the queue is empty
-    def empty(self):
+    def is_empty(self):
         if len(self.queue) is 0:
             return True
         else:
             return False
 
     # Return number of element in the queue
-    def size(self):
+    def get_size(self):
         return len(self.queue)
 
     # Return the item in front of the queue
-    def front(self):
+    def get_front(self):
         return self.queue[0]
 
     # Return the last item of the queue
-    def rear(self):
+    def get_rear(self):
         return self.queue[len(self.queue)-1]
     # Push an item to the queue
 
@@ -75,21 +75,21 @@ queue.print()
 # Result: [4, 8, 16, 32]
 
 # Get the item that's in the front of the queue
-print(queue.front())
+print(queue.get_front())
 # Result: 4
 
 # Get the item that's in the back of the queue
-print(queue.rear())
+print(queue.get_rear())
 # Result: 32
 
 # Get the number of item in the queue (size)
-print("size of queue:", queue.size())
+print("size of queue:", queue.get_size())
 
 # Whether the queue is empty or not
-print("is queue empty:", queue.empty())
+print("is queue empty:", queue.is_empty())
 
 # Clear queue
 queue.clear()
 
 # Whether the queue is empty or not
-print("is queue empty:", queue.empty())
+print("is queue empty:", queue.is_empty())
