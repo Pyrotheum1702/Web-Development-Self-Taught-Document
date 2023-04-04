@@ -13,6 +13,11 @@
     - Functional programming paradigms
   - Object-Oriented Programming:
     - In the object-oriented programming paradigm, objects are the key element of the paradigm. Objects can simply be defined as the instance of a class that contains both data members and the method functions.
+    - OOP most important concept:
+      - Inheritance
+      - Polymorphism
+      - Encapsulation
+      - Abstraction
   - Procedural Programming:
     - Procedural programming mean to program in series of computational steps, the execution instructions that happen in step by step to reach a goal or to complete a certain task.
     - Procedural programming paradigm focuses on the process rather than data.
