@@ -5,7 +5,7 @@ class TraverseMethod(Enum):
     PRE_ORDER: int = 2
     POST_ORDER: int = 3
 class Node:
-    def __init__(self, value):
+    def __init__(self, value: int):
         self.left = None
         self.right = None
         self.value = value
