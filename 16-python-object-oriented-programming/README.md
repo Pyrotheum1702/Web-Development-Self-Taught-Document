@@ -42,9 +42,8 @@
 1. What i learned:
   - Encapsulation is a concept of restricting the access to methods and variables directly to prevent the accidental modification of data.
   - In encapsulation, the variables of a class will be hidden from other classes, and can be accessed only through the methods of their current class.
-  - While coding we don't have a way to restrict the access of member function and data so we use a naming to convention to pretend that's they are not accessible by other class.
-    - `var`: public, accessible globally
-    - `_var`: protected, accessible but it's class and subclasses.
+  - We use a naming to convention to prevent access from other class.
+    - `var`: public, accessible globally.
     - `__var`: private, accessible only within it's own class.
   - But in runtime, Python actually does support for private variables through a double underscore `(i.e. __name)`. It will actually raise an error!
 # Abstraction
@@ -54,7 +53,7 @@
   - Abstraction allow you to just know how to use it without needing to understand how it work.
 # Polymorphism
 1. What i learned:
-  - Polymorphism is the concept of an object having many forms. In Programming in particular inherited methods could be overripen to achieve different behavior to the version from the base class, then when multiple child class having the same method from a parent class but with different behavior, that's method is having multiple form. That's Polymorphism.
+     - Polymorphism is the concept of an object having many forms. In Programming in particular inherited methods could be overridden to achieve different behavior to the version from the base class, then when multiple child class having the same method from a parent class but with different behavior, that's method is having multiple form. That's Polymorphism.
 # Python Magic Methods
 1. Lesson Content:
   - Magic methods
