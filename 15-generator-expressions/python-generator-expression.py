@@ -33,3 +33,32 @@ for i in squares:
 
 print(list_2)
 # Result: list_2 = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225]
+
+
+# Multiple yield example:
+
+def generate_albert_einstein_quotes():
+  yield 'Life is like riding a bicycle. To keep your balance, you must keep moving.'
+  yield 'I never think of the future. It comes soon enough.'
+  yield 'Imagination is more importance than knowledge.'
+
+albert_einstein_quotes = generate_albert_einstein_quotes()
+
+for quote in albert_einstein_quotes:
+  print(quote)
+# Result:
+# Life is like riding a bicycle. To keep your balance, you must keep moving.
+# I never think of the future. It comes soon enough.
+# Imagination is more importance than knowledge.
+
+# explanation: since once the function yields, the function is paused, when the function is called again, it's will start executing where it left off.
+
+albert_einstein_quotes = generate_albert_einstein_quotes()
+
+print(next(albert_einstein_quotes))
+print(next(albert_einstein_quotes))
+print(next(albert_einstein_quotes))
+# Result:
+# Life is like riding a bicycle. To keep your balance, you must keep moving.
+# I never think of the future. It comes soon enough.
+# Imagination is more importance than knowledge.
