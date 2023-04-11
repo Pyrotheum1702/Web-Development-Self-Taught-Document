@@ -51,9 +51,7 @@
     - Conda is an open source package management system and environment management system that runs on Windows, macOS, and Linux. Conda easily creates, saves, loads and switches between environments on your local computer.
     - Basically Conda help you to manage packages and environments in the same software.
 # Pipenv
-1. Lesson Content:
-  - Pipenv
-2. What i learned:
+1. What i learned:
   - What is Pipenv:
     - Pipenv is a Python virtual environment management tool that supports multiple systems and nicely bridges the gaps between pip, pyenv and virtualenv.
     - It automatically creates and manages a virtualenv for your projects.
@@ -70,9 +68,20 @@
     - Notice: the virtual environment subfolder is not in the project folder that's because pipenv manages virtual environments for projects by keeping them in subdirectory of your user profile directory. In my case i could find it in `D:\Users\Administrator\.virtualenvs`
   - To install a package using pipenv use: `$ pipenv install ` + package name.
   - Pipfile:
-    - Is a plain text file contain information about where pipenv get packages from for the project and which packages and what version to use, what version of Python is needed.
+    - Is a plain text file contain information about where Pipenv get packages from for the project and which packages and what version to use, what version of Python is needed.
     - Don't edit this file directly, use `pipenv` from the command line to make any changes.
   - Pipfile.lock:
     - This file describe all the versions of all the packages were installed in the project including the hashes generated from them, this way we can ensure to both ourselves and others that we are in fact installed the same identical versions.
-3. Personal thought:
+2. Personal thought:
   - Pipenv is just a combination of pip and virtual environment.
+# Poetry
+1. What i learned:
+  - What is poetry:
+    - Poetry is a tool for dependency management and packaging in Python. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you.
+  - Poetry is similar to Pipenv.
+  - Poetry offers a lockfile to ensure repeatable installs.
+  - To install Poetry on Window 10 use in command line: `(Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -`
+  - To create a new project with Poetry use: `poetry new ` + project name.
+  - By default a new poetry project doesn't have a virtual environment associated with it. To do that, we use: `poetry env use ` + python.exe *path* at the version that we want to use.
+2. Notice:
+  - Poetry requires Python 3.7+
