@@ -57,6 +57,7 @@ duoc.set_heath_point(7)
 # So you could understand as the method print_information()
 # will print all the information of the object. You dont need
 # to know how it do it, you just need to know how to use it and what it does.
+
 duoc.print_information()
 # Result :
 # name: Duoc

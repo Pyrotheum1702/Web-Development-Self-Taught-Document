@@ -51,9 +51,21 @@
   - Abstraction is defined as a process of handling complexity by hiding unnecessary information from the user.
   - That enables the user to implement even more complex logic on top of the provided abstraction without understanding or even thinking about all the hidden background/back-end complexity.
   - Abstraction allow you to just know how to use it without needing to understand how it work.
+  - Example: `print_information()` method of `Human` class, you don't need to know how the method do it job. You just need to know the method will print all the information of a `Human` object on the terminal. According to the name of the method.
 # Polymorphism
 1. What i learned:
-     - Polymorphism is the concept of an object having many forms. In Programming in particular inherited methods could be overridden to achieve different behavior to the version from the base class, then when multiple child class having the same method from a parent class but with different behavior, that's method is having multiple form. That's Polymorphism.
+  - Polymorphism is the concept of an object having many forms. In Programming in particular inherited methods could be overridden to achieve different behavior to the version from the base class, then when multiple child class having the same method from a parent class but with different behavior, that's method is having multiple form. That's Polymorphism.
+# Abstract Class
+1. Lesson content:
+  - Abstract class
+  - Abstract method
+2. What i learned:
+  - An Abstract class is considered as a blueprint for other classes, user aren't supposed to create an object from that class.
+  - The idea is to have a class as a base class or a prototype class to inherits from, that also not allowing the user to use that class to create object.
+  - A class which contains one or more abstract methods and inherits from `ABC` class is called an abstract class.
+  - An abstract method is a method that has a declaration but does not have an implementation also need to be decorated with `@abstractmethod`. The strategy is to override these abstract methods in child classes.
+  - Abstract method is also could be considered as virtual function.
+  - By default, Python does not provide abstract class and abstract method. They come with a module named `abc`.
 # Python Magic Methods
 1. Lesson Content:
   - Magic methods
