@@ -2,6 +2,7 @@
 1. Python Module
 2. Package Manager
 3. Virtual Environment
+4. Pipenv
 # Python Module
 1. Lesson content:
   - What is a module
@@ -49,3 +50,29 @@
   - Conda:
     - Conda is an open source package management system and environment management system that runs on Windows, macOS, and Linux. Conda easily creates, saves, loads and switches between environments on your local computer.
     - Basically Conda help you to manage packages and environments in the same software.
+# Pipenv
+1. Lesson Content:
+  - Pipenv
+2. What i learned:
+  - What is Pipenv:
+    - Pipenv is a Python virtual environment management tool that supports multiple systems and nicely bridges the gaps between pip, pyenv and virtualenv.
+    - It automatically creates and manages a virtualenv for your projects.
+    - Adds/Removes packages from your Pipfile as you install/uninstall packages.
+  - What pipenv provide:
+    - You no longer need to use pip and virtualenv separately. They work together.
+    - Managing a requirements.txt file with package hashes can be problematic. Pipenv uses Pipfile and Pipfile.lock to separate abstract dependency declarations from the last tested combination. *?*
+    - Hashes are documented in the lock file, always. Security considerations are put first. *?*
+    - Gives you insight into your dependency graph. *?*
+    - Streamline development workflow by supporting local customizations with .env files. *?*
+  - Pipenv is primarily meant to provide users and developers of applications with an easy method to setup a working environment.
+  - To install Pipenv use: `$ pip install --user pipenv`
+  - To create a new project using pipenv use: `$ py -m pipenv --python ` + python version. Example: `3.11.2`
+    - Notice: the virtual environment subfolder is not in the project folder that's because pipenv manages virtual environments for projects by keeping them in subdirectory of your user profile directory. In my case i could find it in `D:\Users\Administrator\.virtualenvs`
+  - To install a package using pipenv use: `$ pipenv install ` + package name.
+  - Pipfile:
+    - Is a plain text file contain information about where pipenv get packages from for the project and which packages and what version to use, what version of Python is needed.
+    - Don't edit this file directly, use `pipenv` from the command line to make any changes.
+  - Pipfile.lock:
+    - This file describe all the versions of all the packages were installed in the project including the hashes generated from them, this way we can ensure to both ourselves and others that we are in fact installed the same identical versions.
+3. Personal thought:
+  - Pipenv is just a combination of pip and virtual environment.
