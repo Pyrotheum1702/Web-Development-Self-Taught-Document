@@ -54,6 +54,7 @@ class Human:
     def speak() -> None:
         pass
 
+
 class HumanInformationPrinter:
     @staticmethod
     def print_information(human: Human) -> None:
@@ -67,4 +68,3 @@ class HumanInformationPrinter:
 duoc = Human()
 
 HumanInformationPrinter.print_information(duoc)
-
