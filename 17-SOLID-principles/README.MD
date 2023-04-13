@@ -2,6 +2,7 @@
   1. SOLID Principles
   2. Single Responsibility Principle
   3. Open/Closed Principle
+  4. Liskov Substitution
 # SOLID Principles
 1. What i learned:
   - SOLID is intended to make designs easier to understand, maintain, and extend. Ultimately, using these design principles makes it easier for coder to avoid issues and to build adaptive, effective, and agile software.
@@ -27,4 +28,12 @@
     - Closed for modification, meaning that the code is set and cannot be changed.
   - Example:
     - Example `Human` class with `attack(AttackMethod attack_method)` method:
-      - For instance: `attack()` is a method that perform an attack in a way of given `attack_method`, if the given `attack_method` is `AttackMethod.PUNCH` it's will do punch .ect.. using switch statement for instance. So whenever we need to implement a new way of attack, we will have to modify the `attack()` method of `Human` class, essentially modifying `Human` class. This violate the Open/Closed principle, To comply with this principle we will make a new class `AttackBase` with a abstract method `attack()` so for every new way of attacking we just need to make new class inherit from `AttackBase` and override `attack()`, example: `AttackMethodPunch(AttackBase)`. Back in `attack()` method of the `Human` class, it will now be `attack(AttackMethodBase attack_method)` we will make it just call `attack()` from of given `attack_method`. From this, whenever we want to implement a new way of attack, we just need to create a new class and inherits from `AttackBase`(mean extending), without modifying `Human` class(mean not modifying).
+      - For instance: `attack()` is a method that perform an attack in a way of given `attack_method`, if the given `attack_method` is `AttackMethod.PUNCH` it's will do punch .ect.. using switch statement for instance. So whenever we need to implement a new way of attack, we will have to modify the `attack()` method of `Human` class, essentially modifying `Human` class. This violate the Open/Closed principle, To comply with this principle we will make a new class `AttackBase` with a abstract method `attack()` so for every new way of attacking we just need to make new class inherit from `AttackBase` class and override `attack()` method, example: `AttackMethodPunch(AttackBase)`. Back in `attack()` method of `Human` class, it will now be `attack(AttackMethodBase attack_method)`, we will make it just call `attack()` from of given `attack_method`. From this, whenever we want to implement a new way of attack, we just need to create a new class and inherits from `AttackBase`(mean extending), without modifying `Human` class(mean not modifying).
+# Liskov Substitution Principle
+1. What i learned:
+  - Liskov Substitution principle states that subclasses should be substitutable for their base classes.
+    - This means that, given that class B is a subclass(child class) of class A, we should be able to pass an object of class B to any method that expects an object of class A and the method should not give any weird output in that case.
+  - Example `Human` and `Snake` is a subclass(child class) of `Animal` class:
+    - There is a method expect a `Animal` object as an argument and call `walk()` method of that object, a `Human` and `Snake` objects should be substitutable for that argument without getting any weird result. But in this case `Human` can walk but `Snake` does not, `Snake` do the slithering instead. This violate the principle, because `Snake` can't walk. To comply to the principle, we would make a new class `LimblessAnimal` that do `slither()` instead of `walk()` and have `Snake` class inherit from it instead. Now, `Human` is substitutable for `Animal` and `Snake` is substitutable for `LimblessAnimal`, everyone is happy now.
+  - When a class does not obey this principle, it leads to some nasty bugs that are hard to detect.
+

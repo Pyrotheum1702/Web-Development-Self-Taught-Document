@@ -19,9 +19,9 @@ class Human:
     def attack(self, attack_method: AttackMethod) -> None:
         match attack_method:
             case AttackMethod.PUNCH:
-                print('Punch:', self.damage)
+                print('Punch:', self.damage, 'damage')
             case AttackMethod.KICK:
-                print('Kick:', self.damage * 1.5)
+                print('Kick:', self.damage * 1.5, 'damage')
             case _:
                 print('Unknown attack_method!')
 
@@ -32,10 +32,10 @@ duoc = Human()
 duoc.set_damage(50)
 
 duoc.attack(AttackMethod.PUNCH)
-# Result: Punch: 50
+# Result: Punch: 50 damage
 
 duoc.attack(AttackMethod.KICK)
-# Result: Kick: 75.0
+# Result: Kick: 75.0 damage
 
 
 
@@ -49,12 +49,12 @@ class AttackMethodBase(ABC):
 
 class PunchAttackMethod(AttackMethodBase):
     def attack(self, damage: int) -> None:
-        print('Punch:', damage)
+        print('Punch:', damage, 'damage')
 
 
 class KickAttackMethod(AttackMethodBase):
     def attack(self, damage: int) -> None:
-        print('Kick:', damage * 1.5)
+        print('Kick:', damage * 1.5, 'damage')
 
 
 class Human:
@@ -74,7 +74,7 @@ duoc = Human()
 duoc.set_damage(50)
 
 duoc.attack(PunchAttackMethod())
-# Result: Punch: 50
+# Result: Punch: 50 damage
 
 duoc.attack(KickAttackMethod())
-# Result: Kick: 75.0
+# Result: Kick: 75.0 damage
