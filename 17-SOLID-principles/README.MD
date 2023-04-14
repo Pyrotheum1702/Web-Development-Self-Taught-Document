@@ -3,6 +3,8 @@
   2. Single Responsibility Principle
   3. Open/Closed Principle
   4. Liskov Substitution
+  5. Interface Segregation Principle
+  6. Dependency Inversion Principle
 # SOLID Principles
 1. What i learned:
   - SOLID is intended to make designs easier to understand, maintain, and extend. Ultimately, using these design principles makes it easier for coder to avoid issues and to build adaptive, effective, and agile software.
@@ -36,7 +38,7 @@
   - Example `Human` and `Snake` is a subclass(child class) of `Animal` class:
     - There is a method expect a `Animal` object as an argument and call `walk()` method of that object, a `Human` and `Snake` objects should be substitutable for that argument without getting any weird result. But in this case `Human` can walk but `Snake` does not, `Snake` do the slithering instead. This violate the principle, because `Snake` can't walk. To comply to the principle, we would make a new class `LimblessAnimal` that do `slither()` instead of `walk()` and have `Snake` class inherit from it instead. Now, `Human` is substitutable for `Animal` and `Snake` is substitutable for `LimblessAnimal`, everyone is happy now.
   - When a class does not obey this principle, it leads to some nasty bugs that are hard to detect.
-# Interface Segregation
+# Interface Segregation Principle
 1. What i learned:
   - Interface segregation means that overall it's better to have several specific interfaces as opposed to one general purpose interface.
   - Segregation means keeping things separated, and the Interface Segregation Principle is about separating the interfaces.
@@ -44,4 +46,12 @@
   - A class should not be forced to depend on methods it does not use.
   - Example `Human`, `Bird`, `Snake` are subclass(child class) of `Animal` class:
     - `Animal` has methods like `walk()`, `slither()`, `fly()` which are inherited by `Human`, `Bird` and `Snake`. This is violating the principle because for instance `Human` would get `slither()` and `fly()` which it does not use, human can not fly or slither. The same for `Bird` and `Snake`. To comply to the principle, `Human` should only able to `walk()` and `Snake` do `slither()`, `Bird` do `fly()`, keep them separately.
-    -
+# Dependency Inversion Principle
+1. What i learned:
+  - The Dependency Inversion principle states that our classes should depend upon interfaces or abstract classes instead of concrete classes and functions.
+    -  Concrete class is a class that has a definition for all its methods and has no abstract method.
+  - So the principle is mean to gather the use of abstract class and abstract methods over concrete classes and functions.
+
+2. Wikipedia statement (very hard to understand):
+  - High-level modules should not import anything from low-level modules. Both should depend on abstractions (e.g., interfaces).
+  - Abstractions should not depend on details. Details (concrete implementations) should depend on abstractions.
