@@ -38,6 +38,12 @@
       - Data protection.
       - Not suitable for real-world objects.
       - Harder to write.
+    - Problems:
+      - Banana Monkey Jungle Problem.
+      - The Diamond Problem.
+      - The Fragile Base Class Problem.
+      - The Hierarchy Problem.
+      - The Reference Problem.
   - Functional programming:
     - Functional programming is a programming paradigm in which use functions as the main building blocks of the program.
     - The most importance concept in functional programming is the concept of pure function.
